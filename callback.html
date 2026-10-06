@@ -3,7 +3,9 @@
 input{width:100%;padding:10px;font:inherit;border:1px solid #ccd;border-radius:8px}button{margin-top:10px;padding:10px 18px;font:inherit;border:0;border-radius:8px;background:#fe2c55;color:#fff;cursor:pointer}
 @media (prefers-color-scheme:dark){body{background:#0b0f17;color:#e6e8ee}input{background:#161a22;color:#e6e8ee;border-color:#2a2f3a}}</style></head><body>
 <h1>TikTok authorization received</h1>
-<p>Copy this address and paste it into Gimakhin Uploader on your computer to finish connecting.</p>
+<p><a id="ret" style="display:inline-block;padding:10px 18px;border-radius:8px;background:#fe2c55;color:#fff;text-decoration:none;font-weight:600">Return to Gimakhin Uploader</a></p>
+<p>If the button does not work, copy this address and paste it into Gimakhin Uploader on your computer.</p>
 <input id="u" readonly><button onclick="navigator.clipboard.writeText(u.value);this.textContent='Copied'">Copy</button>
 <p style="color:#778;font-size:14px">This page does not store or send anything. <a href="./privacy.html">Privacy Policy</a></p>
-<script>const u=document.getElementById('u');u.value=location.href;</script></body></html>
+<script>const u=document.getElementById('u');u.value=location.href;
+document.getElementById('ret').href='http://127.0.0.1:8765/?callback='+encodeURIComponent(location.href);</script></body></html>
